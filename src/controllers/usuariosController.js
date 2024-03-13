@@ -2,7 +2,7 @@ const usuarioService = require('../services/usuariosService');
 
 module.exports = {
     buscarTodos: async (req, res) => {
-        let json = {error:'Usuario não encontrado!', result:[]};
+        let json = {error:'', result:[]};
 
         let usuarios = await usuarioService.buscarTodos();
         for(let i in usuarios){
